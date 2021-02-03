@@ -32,6 +32,8 @@ leaflet()%>%addTiles()
 mapa = readOGR(dsn="C:/Users/Irene/Desktop/Proyectos/EUSTAT/Scripts/ESP_adm", layer="ESP_adm1", encoding="utf-8")
 mapa@data$NAME_1 <- as_utf8(mapa@data$NAME_1) # Creo que no cambia nada
 mapa@data$NAME_1
+
+par(mar=c(1,1,1,1))
 plot(mapa)
 
 
